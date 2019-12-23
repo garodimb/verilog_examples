@@ -6,6 +6,8 @@ TESTCASES = \
 	5_user_defined_primitive \
 	6_full_adder \
 	7_full_adder_2_bits \
+	8_mux_2x1 \
+	9_mux_4x1 \
 
 all: 	
 	for dir in $(TESTCASES); \
