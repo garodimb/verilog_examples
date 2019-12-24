@@ -1,0 +1,27 @@
+version: 1.0.{build}
+
+image: Ubuntu
+
+platform: x64
+
+configuration: Debug
+
+install:
+  - sudo apt update
+  - sudo apt install iverilog
+
+build_script:
+  - make build 
+
+test_script:
+  - make run
+
+#notifications:
+
+  # Email
+#  - provider: Email
+#    to:
+#      - garodimb@gmail.com
+#    subject: 'Build {{status}}'                  # optional
+#    message: "{{message}}, {{commitId}}, ..."    # optional
+#    on_build_status_changed: true
