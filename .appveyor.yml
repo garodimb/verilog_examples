@@ -1,0 +1,22 @@
+version: 1.0.{build}
+
+clone_folder: c:\projects\verilog_examples
+
+install:
+  - cmd: echo "Installing additional software"
+
+build_script:
+  - cmd: echo "Building things"
+
+test_script:
+  - cmd: echo "Testing things.."
+
+notifications:
+
+  # Email
+  - provider: Email
+    to:
+      - garodimb@gmail.com
+    subject: 'Build {{status}}'                  # optional
+    message: "{{message}}, {{commitId}}, ..."    # optional
+    on_build_status_changed: true
