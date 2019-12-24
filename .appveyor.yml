@@ -11,10 +11,10 @@ install:
   - sudo apt install iverilog
 
 build_script:
-  - pwd 
+  - make build 
 
 test_script:
-  - pwd
+  - make run
 
 notifications:
 
