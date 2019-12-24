@@ -1,15 +1,20 @@
 version: 1.0.{build}
 
-clone_folder: c:\projects\verilog_examples
+image: Ubuntu
+
+platform: x64
+
+configuration: Debug
 
 install:
-  - cmd: echo "Installing additional software"
+  - sudo apt update
+  - sudo apt install iverilog
 
 build_script:
-  - cmd: echo "Building things"
+  - pwd 
 
 test_script:
-  - cmd: echo "Testing things.."
+  - pwd
 
 notifications:
 
